@@ -1,31 +1,31 @@
-# SD2.5 提示词助手 使用许可
+ SD2.5 提示词助手 使用许可
 
-**版本：v2.3**
+版本：v2.3
 
 本许可由 SD2.5 提示词助手（内核 V6.17Flash，插件分发包 1.0.1）之发布者（以下简称"发布者"）与使用者订立，规范使用者对许可标的之使用。
 
 ---
 
-## 第一条　定义与适用范围
+ 第一条　定义与适用范围
 
-**1.1** 本许可适用于本发布仓库中由发布者依法享有或有权许可的全部文件（以下称"许可标的"），包括：核心预设、知识库、输出模板、完整输出样例、插件与安装程序，以及其后续版本。
+1.1 本许可适用于本发布仓库中由发布者依法享有或有权许可的全部文件（以下称"许可标的"），包括：核心预设、知识库、输出模板、完整输出样例、插件与安装程序，以及其后续版本。
 
-**1.2** 本许可中：
+1.2 本许可中：
 
-- **原版**：许可标的中未经修改，且其字节数与 SHA256 校验值与《文件校验.json》记载一致之文件；
-- **本地安装副本**：使用者安装于自有设备上之许可标的副本；
-- **个人偏好层**：安装后生成于本地之个人配置（如 `我的偏好.md`），属使用者自有配置；
-- **生成产物**：使用者借助本助手获得之内容，包括分镜提示词、分镜表、镜头卡、台词表、节拍表、脚本及据此拍摄或生成之作品；
-- **再分发**：向本发布包之外的任何人、机器或环境提供许可标的或其副本，包括提供副本、下载地址、安装介质、镜像、容器、账号或访问途径；
-- **商业嵌入**：将许可标的一并置入对外销售、出租、交付、托管或供第三方操作之产品、服务、流程或环境。
+- 原版：许可标的中未经修改，且其字节数与 SHA256 校验值与《文件校验.json》记载一致之文件；
+- 本地安装副本：使用者安装于自有设备上之许可标的副本；
+- 个人偏好层：安装后生成于本地之个人配置（如 `我的偏好.md`），属使用者自有配置；
+- 生成产物：使用者借助本助手获得之内容，包括分镜提示词、分镜表、镜头卡、台词表、节拍表、脚本及据此拍摄或生成之作品；
+- 再分发：向本发布包之外的任何人、机器或环境提供许可标的或其副本，包括提供副本、下载地址、安装介质、镜像、容器、账号或访问途径；
+- 商业嵌入：将许可标的一并置入对外销售、出租、交付、托管或供第三方操作之产品、服务、流程或环境。
 
-**1.3** 本许可仅授予本文件明文规定之权利，未规定者一律保留。本项目不属 OSI 意义上的开源软件；本许可为专有许可。
+1.3 本许可仅授予本文件明文规定之权利，未规定者一律保留。本项目不属 OSI 意义上的开源软件；本许可为专有许可。
 
 ---
 
-## 第二条　授予之权利
+ 第二条　授予之权利
 
-**2.1** 发布者授予使用者下列权利，无需另行许可、无需付费、无需分成：
+2.1 发布者授予使用者下列权利，无需另行许可、无需付费、无需分成：
 
 1. 下载、复制、安装并运行许可标的，不限设备、份数、地域与用途；
 2. 使用本助手创作内容，生成产物可自由使用，含商业用途；
@@ -34,13 +34,13 @@
 5. 自公开发布渠道自行获取原版并安装（该等自行获取不构成再分发）；
 6. 以真实方式说明其使用本助手及生成产物，并保留本许可与署名。
 
-**2.2** 前款授权自使用者首次复制或使用许可标的时生效。
+2.2 前款授权自使用者首次复制或使用许可标的时生效。
 
 ---
 
-## 第三条　限制
+ 第三条　限制
 
-**3.1** 未经发布者事先书面同意，使用者不得：
+3.1 未经发布者事先书面同意，使用者不得：
 
 1. 发布、提供或展示任何经修改之许可标的版本，无论是否改名、翻译、拆分、改编或去除署名；
 2. 再分发许可标的，或以任何方式使他人取得本包，无论该副本是否经修改；
@@ -50,111 +50,102 @@
 6. 以本助手为核心对外提供有偿之提示词或分镜服务，或将其作为对外宣传、投标与交付清单之核心卖点；
 7. 移除、遮蔽或替换许可标的中之署名、版权与许可说明，或以他人名义发布，或暗示获得发布者之背书。
 
-**3.2　判定口径**：使用者在本人或单一团队内部以本助手创作内容（无论该内容是否用于商业项目、是否交付客户），属第二条之自由使用；惟许可标的一经进入"销售、交付客户、供客户自行操作、随产品一同交付"之情形，即构成商业嵌入，须事先书面同意。
+3.2　判定口径：使用者在本人或单一团队内部以本助手创作内容（无论该内容是否用于商业项目、是否交付客户），属第二条之自由使用；惟许可标的一经进入"销售、交付客户、供客户自行操作、随产品一同交付"之情形，即构成商业嵌入，须事先书面同意。
 
-**3.3** 违反本条者，其项下授权自违约行为发生时自动终止。
-
----
-
-## 第四条　生成产物
-
-**4.1** 使用者输入之剧本、素材与文档之权利，不因使用本助手而转移。
-
-**4.2** 生成产物不构成许可标的之复制或衍生版本，可用于任何用途，含商业用途、付费交付、课程与作品集，无需发布者同意、付费或分成。
-
-**4.3** 生成产物之使用，不得成为第三条第 1 款第 4 至 6 项商业嵌入之依据。
-
-**4.4** 本许可不保证生成产物之著作权归属、独创性、可受保护性或不侵权性；使用者应自行审查其输入与产物之使用权。
+3.3 违反本条者，其项下授权自违约行为发生时自动终止。
 
 ---
 
-## 第五条　第三方组件、素材与平台
+ 第四条　生成产物
 
-**5.1** 许可标的所引用或依赖之第三方组件及素材，各依其各自许可；本许可不替代、不减损该等许可，相关权利仍属各自权利人。
+4.1 使用者输入之剧本、素材与文档之权利，不因使用本助手而转移。
 
-**5.2** 于 GitHub 等平台发布与使用时，应遵守该平台当时之用户协议与规则；本许可不否认平台条款已要求之查阅、缓存与平台内 Fork 等权限。
+4.2 生成产物不构成许可标的之复制或衍生版本，可用于任何用途，含商业用途、付费交付、课程与作品集，无需发布者同意、付费或分成。
 
----
+4.3 生成产物之使用，不得成为第三条第 1 款第 4 至 6 项商业嵌入之依据。
 
-## 第六条　免责与责任限制
-
-**6.1** 本助手按现状提供，发布者不保证特定模型、DSH 版本、提示词执行效果、生成视频效果或持续支持。
-
-**6.2** 在法律允许之最大范围内，发布者不对因使用或不能使用本助手而产生之任何间接、偶然、特殊、惩罚性或后果性损害承担责任；其累计责任以使用者为取得本助手所支付之对价为限，未支付对价者，以人民币 100 元等值金额或适用法律允许之最低限度，取其较低者为限。
-
-**6.3** 前款限制不适用于依法不得排除之责任。
-
-**6.4** 本许可文本不构成法律意见。
+4.4 本许可不保证生成产物之著作权归属、独创性、可受保护性或不侵权性；使用者应自行审查其输入与产物之使用权。
 
 ---
 
-## 第七条　期限与终止
+ 第五条　第三方组件、素材与平台
 
-**7.1** 本许可自生效之日起持续有效，至发布者撤回本许可或以新版本许可取代时止。
+5.1 许可标的所引用或依赖之第三方组件及素材，各依其各自许可；本许可不替代、不减损该等许可，相关权利仍属各自权利人。
 
-**7.2** 授权终止后，使用者应停止使用并删除许可标的之副本；个人偏好层与生成产物可以保留，惟其内容如构成许可标的之复制或衍生版本，仍应删除。
-
-**7.3** 第四条、第五条、第六条、第八条与第九条于授权终止后继续有效。
+5.2 于 GitHub 等平台发布与使用时，应遵守该平台当时之用户协议与规则；本许可不否认平台条款已要求之查阅、缓存与平台内 Fork 等权限。
 
 ---
 
-## 第八条　联系与商业授权
+ 第六条　免责与责任限制
 
-**8.1** 需从事第三条第 1 款第 1 至 6 项行为者，须取得发布者事先书面许可。发布者仅得在其自身拥有或有权许可之范围内作出授权。
+6.1 本助手按现状提供，发布者不保证特定模型、DSH 版本、提示词执行效果、生成视频效果或持续支持。
 
-**8.2** 商业授权之申请，请通过本发布仓库之 Issue 联系发布者。
+6.2 在法律允许之最大范围内，发布者不对因使用或不能使用本助手而产生之任何间接、偶然、特殊、惩罚性或后果性损害承担责任；其累计责任以使用者为取得本助手所支付之对价为限，未支付对价者，以人民币 100 元等值金额或适用法律允许之最低限度，取其较低者为限。
 
----
+6.3 前款限制不适用于依法不得排除之责任。
 
-## 第九条　适用法律与争议解决
-
-**9.1** 本许可之解释与适用，适用发布地现行有效之法律（不含冲突法规则）。
-
-**9.2** 因本许可产生或与本许可有关之任何争议，双方应先行友好协商解决；协商不成者，按适用法律提交有管辖权之法院或仲裁机构解决。本许可不预设任何专属管辖法院或专属仲裁机构。
-
-**9.3** 本条不排除任何一方依其本籍国法律依法享有之强制性管辖或争议解决权利。
+6.4 本许可文本不构成法律意见。
 
 ---
 
-## 第十条　版本与修改
+ 第七条　期限与终止
 
-**10.1** 本许可为 v2.3，取代 v2.2 及更早版本。
+7.1 本许可自生效之日起持续有效，至发布者撤回本许可或以新版本许可取代时止。
 
-**10.2** 发布者得于日后修改本许可；修改后版本自其于本发布仓库公布之日起适用于其后发生之使用行为，不溯及既往。继续使用旧版条款取得之许可标的者，其权利义务仍以旧版条款为准。
+7.2 授权终止后，使用者应停止使用并删除许可标的之副本；个人偏好层与生成产物可以保留，惟其内容如构成许可标的之复制或衍生版本，仍应删除。
 
-**10.3** 复制或使用许可标的，即视为接受本许可全部条款。
-
----
-
-**©guangzhikabi · 保留所有权利。**
-*©guangzhikabi · All rights reserved.*
+7.3 第四条、第五条、第六条、第八条与第九条于授权终止后继续有效。
 
 ---
 
-# English
+ 第八条　联系与商业授权
 
-**Version: v2.3**
+8.1 需从事第三条第 1 款第 1 至 6 项行为者，须取得发布者事先书面许可。发布者仅得在其自身拥有或有权许可之范围内作出授权。
 
-This License is entered into between the publisher of the SD2.5 Prompt Assistant (kernel V6.17Flash, plugin distribution package 1.0.1) (the "**Publisher**") and the user, and governs the user's use of the Licensed Materials.
+8.2 商业授权之申请，请通过本发布仓库之 Issue 联系发布者。
 
-## Article 1 — Definitions and Scope
 
-**1.1** This License applies to all files in this distribution repository to which the Publisher holds rights or is entitled to license (the "**Licensed Materials**"), namely: the core preset, the knowledge bases, the output template, the worked output examples, the plugin and the installer, together with their later versions.
+---
 
-**1.2** In this License:
+ 第九条　版本与修改
 
-- "**Original**" means a file of the Licensed Materials that has not been modified and whose byte length and SHA256 checksum match the entries in `文件校验.json`;
-- "**Local Installed Copy**" means a copy of the Licensed Materials installed by the user on devices the user is entitled to use;
-- "**Preferences Layer**" means the local user configuration generated after installation (such as `我的偏好.md`), which is the user's own configuration;
-- "**Generated Outputs**" means content the user obtains with the assistance of the assistant, including storyboard prompts, storyboard tables, shot cards, dialogue lists, beat sheets, scripts, and works produced or generated from them;
-- "**Redistribution**" means making the Licensed Materials or a copy of them available to any person, machine or environment outside this distribution package, including copies, download links, install media, mirrors, containers, accounts or access paths;
-- "**Commercial Integration**" means placing the Licensed Materials into a product, service, workflow or environment that is sold, rented, delivered, hosted, or operated by third parties.
+9.1 本许可为 v2.3，取代 v2.2 及更早版本。
 
-**1.3** This License grants only the rights expressly stated in it; all others are reserved. The project is not open-source software within the meaning of the OSI. This is a proprietary licence.
+9.2 发布者得于日后修改本许可；修改后版本自其于本发布仓库公布之日起适用于其后发生之使用行为，不溯及既往。继续使用旧版条款取得之许可标的者，其权利义务仍以旧版条款为准。
 
-## Article 2 — Rights Granted
+9.3 复制或使用许可标的，即视为接受本许可全部条款。
 
-**2.1** The Publisher grants the user the following rights, without further consent, fee or revenue share:
+---
+
+©guangzhikabi · 保留所有权利。
+©guangzhikabi · All rights reserved.
+
+---
+
+ English
+
+Version: v2.3
+
+This License is entered into between the publisher of the SD2.5 Prompt Assistant (kernel V6.17Flash, plugin distribution package 1.0.1) (the "Publisher") and the user, and governs the user's use of the Licensed Materials.
+
+ Article 1 — Definitions and Scope
+
+1.1 This License applies to all files in this distribution repository to which the Publisher holds rights or is entitled to license (the "Licensed Materials"), namely: the core preset, the knowledge bases, the output template, the worked output examples, the plugin and the installer, together with their later versions.
+
+1.2 In this License:
+
+- "Original" means a file of the Licensed Materials that has not been modified and whose byte length and SHA256 checksum match the entries in `文件校验.json`;
+- "Local Installed Copy" means a copy of the Licensed Materials installed by the user on devices the user is entitled to use;
+- "Preferences Layer" means the local user configuration generated after installation (such as `我的偏好.md`), which is the user's own configuration;
+- "Generated Outputs" means content the user obtains with the assistance of the assistant, including storyboard prompts, storyboard tables, shot cards, dialogue lists, beat sheets, scripts, and works produced or generated from them;
+- "Redistribution" means making the Licensed Materials or a copy of them available to any person, machine or environment outside this distribution package, including copies, download links, install media, mirrors, containers, accounts or access paths;
+- "Commercial Integration" means placing the Licensed Materials into a product, service, workflow or environment that is sold, rented, delivered, hosted, or operated by third parties.
+
+1.3 This License grants only the rights expressly stated in it; all others are reserved. The project is not open-source software within the meaning of the OSI. This is a proprietary licence.
+
+ Article 2 — Rights Granted
+
+2.1 The Publisher grants the user the following rights, without further consent, fee or revenue share:
 
 1. to download, copy, install and run the Licensed Materials, without limits as to devices, copies, territory or purpose;
 2. to create content with the assistant, the Generated Outputs being freely usable, including for commercial purposes;
@@ -163,11 +154,11 @@ This License is entered into between the publisher of the SD2.5 Prompt Assistant
 5. to obtain the Original from a public distribution channel and install it (such self-obtaining does not constitute Redistribution);
 6. to state truthfully that the user used the assistant and its Generated Outputs, and to keep this License and the attribution.
 
-**2.2** The rights above take effect when the user first copies or uses the Licensed Materials.
+2.2 The rights above take effect when the user first copies or uses the Licensed Materials.
 
-## Article 3 — Restrictions
+ Article 3 — Restrictions
 
-**3.1** Without the Publisher's prior written consent, the user must not:
+3.1 Without the Publisher's prior written consent, the user must not:
 
 1. publish, make available or display any modified version of the Licensed Materials, whether or not renamed, translated, split, adapted or de-branded;
 2. Redistribute the Licensed Materials, or otherwise enable any other person to obtain this package, whether or not the copy has been modified;
@@ -177,64 +168,56 @@ This License is entered into between the publisher of the SD2.5 Prompt Assistant
 6. charge for prompt or storyboard services built around the assistant, or make it the headline selling point in marketing, bids or deliverable lists;
 7. remove, obscure or replace attribution, copyright or licence notices in the Licensed Materials, publish under someone else's name, or imply the Publisher's endorsement.
 
-**3.2 How to tell.** Creating content with the assistant **inside the user's own work or a single team's work — whether or not the content is for a commercial project or is delivered to a client — is free use under Article 2**. Once the Licensed Materials themselves enter anything that is sold, delivered to clients, operated by clients, or shipped with a product, that is Commercial Integration and requires prior written consent.
+3.2 How to tell. Creating content with the assistant inside the user's own work or a single team's work — whether or not the content is for a commercial project or is delivered to a client — is free use under Article 2. Once the Licensed Materials themselves enter anything that is sold, delivered to clients, operated by clients, or shipped with a product, that is Commercial Integration and requires prior written consent.
 
-**3.3** Breach of this Article terminates the corresponding rights automatically, at the moment of the breach.
+3.3 Breach of this Article terminates the corresponding rights automatically, at the moment of the breach.
 
-## Article 4 — Generated Outputs
+ Article 4 — Generated Outputs
 
-**4.1** Rights in the user's inputs (scripts, assets and documents) are not transferred by using the assistant.
+4.1 Rights in the user's inputs (scripts, assets and documents) are not transferred by using the assistant.
 
-**4.2** Generated Outputs are not copies or Derivative Works of the Licensed Materials and may be used for any purpose, including commercial use, paid delivery, courses and portfolios, without the Publisher's consent, fee or revenue share.
+4.2 Generated Outputs are not copies or Derivative Works of the Licensed Materials and may be used for any purpose, including commercial use, paid delivery, courses and portfolios, without the Publisher's consent, fee or revenue share.
 
-**4.3** Use of Generated Outputs must not serve as a basis for Commercial Integration under Article 3.1(4) to (6).
+4.3 Use of Generated Outputs must not serve as a basis for Commercial Integration under Article 3.1(4) to (6).
 
-**4.4** This License gives no warranty that the Generated Outputs are owned, original, protectable or non-infringing; the user reviews the rights to their own inputs and outputs.
+4.4 This License gives no warranty that the Generated Outputs are owned, original, protectable or non-infringing; the user reviews the rights to their own inputs and outputs.
 
-## Article 5 — Third-Party Components, Assets and the Platform
+ Article 5 — Third-Party Components, Assets and the Platform
 
-**5.1** Third-party components and assets referenced or relied on by the Licensed Materials remain subject to their own licences; this License does not replace or diminish them, and the respective rights remain with their respective rightsholders.
+5.1 Third-party components and assets referenced or relied on by the Licensed Materials remain subject to their own licences; this License does not replace or diminish them, and the respective rights remain with their respective rightsholders.
 
-**5.2** When publishing or using the materials on GitHub or similar platforms, the platform's then-current terms and rules apply. This License does not deny viewing, caching or in-platform forking rights already required by those terms.
+5.2 When publishing or using the materials on GitHub or similar platforms, the platform's then-current terms and rules apply. This License does not deny viewing, caching or in-platform forking rights already required by those terms.
 
-## Article 6 — Disclaimer and Limitation of Liability
+ Article 6 — Disclaimer and Limitation of Liability
 
-**6.1** The assistant is provided as is. The Publisher gives no warranty as to particular models, DSH versions, prompt execution, generated video results, or continued support.
+6.1 The assistant is provided as is. The Publisher gives no warranty as to particular models, DSH versions, prompt execution, generated video results, or continued support.
 
-**6.2** To the maximum extent permitted by law, the Publisher is not liable for any indirect, incidental, special, punitive or consequential damages arising from the use of, or inability to use, the assistant. The Publisher's aggregate liability is limited to the consideration paid by the user to obtain the assistant; where no consideration was paid, it is limited to the RMB 100 equivalent or the minimum permitted by applicable law, whichever is lower.
+6.2 To the maximum extent permitted by law, the Publisher is not liable for any indirect, incidental, special, punitive or consequential damages arising from the use of, or inability to use, the assistant. The Publisher's aggregate liability is limited to the consideration paid by the user to obtain the assistant; where no consideration was paid, it is limited to the RMB 100 equivalent or the minimum permitted by applicable law, whichever is lower.
 
-**6.3** The foregoing limitation does not apply to liability that cannot be excluded by law.
+6.3 The foregoing limitation does not apply to liability that cannot be excluded by law.
 
-**6.4** This text is not legal advice.
+6.4 This text is not legal advice.
 
-## Article 7 — Term and Termination
+ Article 7 — Term and Termination
 
-**7.1** This License remains in force until the Publisher withdraws it or replaces it with a later version.
+7.1 This License remains in force until the Publisher withdraws it or replaces it with a later version.
 
-**7.2** On termination the user shall cease using and delete copies of the Licensed Materials; the Preferences Layer and Generated Outputs may be kept, unless their content constitutes a copy or Derivative Work of the Licensed Materials, in which case it must be deleted.
+7.2 On termination the user shall cease using and delete copies of the Licensed Materials; the Preferences Layer and Generated Outputs may be kept, unless their content constitutes a copy or Derivative Work of the Licensed Materials, in which case it must be deleted.
 
-**7.3** Articles 4, 5, 6, 8 and 9 survive termination.
+7.3 Articles 4, 5, 6, 8 and 9 survive termination.
 
-## Article 8 — Contact and Commercial Authorisation
+ Article 8 — Contact and Commercial Authorisation
 
-**8.1** Any act under Article 3.1(1) to (6) requires the Publisher's prior written permission. The Publisher may authorise only within what it owns or is entitled to license.
+8.1 Any act under Article 3.1(1) to (6) requires the Publisher's prior written permission. The Publisher may authorise only within what it owns or is entitled to license.
 
-**8.2** Requests for commercial authorisation are made through an Issue on this distribution repository.
+8.2 Requests for commercial authorisation are made through an Issue on this distribution repository.
 
-## Article 9 — Governing Law and Dispute Resolution
+ Article 9 — Version and Amendments
 
-**9.1** This License is governed by the law in force at the place of publication, excluding its conflict-of-law rules.
+9.1 This License is v2.3 and replaces v2.2 and all earlier versions.
 
-**9.2** Any dispute arising out of or in connection with this License shall first be settled amicably; failing that, it shall be submitted to a court or arbitral body with jurisdiction under applicable law. No exclusive forum is designated.
+9.2 The Publisher may amend this License later. An amended version applies to use occurring after its publication in this repository and is not retroactive. Users who obtained the Licensed Materials under an earlier version remain bound by that version.
 
-**9.3** This Article does not exclude any mandatory jurisdiction or dispute-resolution right either party enjoys under the law of its own country.
+9.3 Copying or using the Licensed Materials constitutes acceptance of all terms of this License.
 
-## Article 10 — Version and Amendments
-
-**10.1** This License is v2.3 and replaces v2.2 and all earlier versions.
-
-**10.2** The Publisher may amend this License later. An amended version applies to use occurring after its publication in this repository and is not retroactive. Users who obtained the Licensed Materials under an earlier version remain bound by that version.
-
-**10.3** Copying or using the Licensed Materials constitutes acceptance of all terms of this License.
-
-**©guangzhikabi · All rights reserved.**
+©guangzhikabi · All rights reserved.
