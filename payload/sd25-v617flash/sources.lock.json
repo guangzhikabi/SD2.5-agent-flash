@@ -1,0 +1,71 @@
+{
+  "version": "V6.17Flash",
+  "source": "原版13份Markdown，路径相对references/v6.17flash",
+  "files": [
+    {
+      "name": "完整输出样例_V6.17Flash.md",
+      "bytes": 22885,
+      "sha256": "45ed4483740db8665a54502111c8fdb2d33a80bdc8ef91b7b74c1f32d5605f4e"
+    },
+    {
+      "name": "智能库_01规则与参数_V6.17Flash.md",
+      "bytes": 16840,
+      "sha256": "04e9f7428554345439d1a0c58806fb715561712829c968f0ff702eb9e5654347"
+    },
+    {
+      "name": "智能库_13镜头卡样本库_V6.17Flash.md",
+      "bytes": 2350,
+      "sha256": "c5b54a25667a4d0510bc14bd2664911820af0619219ec09f9d126ce8b50edccc"
+    },
+    {
+      "name": "智能库_14场景原型与镜组套路_V6.17Flash.md",
+      "bytes": 1796,
+      "sha256": "5fee0dfe5a2122f35b462e039f3e726a5bc009fe031437583f2eda44c3c27279"
+    },
+    {
+      "name": "智能库_15情绪与动作词表_V6.17Flash.md",
+      "bytes": 1805,
+      "sha256": "79139955458a06167e038aa918f24d1baea17e2ede206a2012f914aa9efeee5e"
+    },
+    {
+      "name": "智能库_16常见失败案例库_V6.17Flash.md",
+      "bytes": 1862,
+      "sha256": "eaa160bf64a93621561cf10cac77b922816e353134f594e77395fa3c7a9d1e32"
+    },
+    {
+      "name": "智能库_17影史机制_机位轴线与对话_V6.17Flash.md",
+      "bytes": 1466,
+      "sha256": "b9f12128bf914f4de94240c64ee9efd6f163ac0b7b693a1d833f3db473af9c90"
+    },
+    {
+      "name": "智能库_18影史机制_运镜光线与转场_V6.17Flash.md",
+      "bytes": 1355,
+      "sha256": "95833631572978e291e4f1b9cee785f7a37952e52faca3d52dc0b3bbd4f4cb0b"
+    },
+    {
+      "name": "更新清单_V6.17Flash.md",
+      "bytes": 2381,
+      "sha256": "cf1d1465803b64e56ef2f7c4ef232185be4c765a0353f7fc55f0de2257d04f5d"
+    },
+    {
+      "name": "核心预设_V6.17Flash.md",
+      "bytes": 33984,
+      "sha256": "4714d5d7280f3720b1667ce263d63f14a9c6d528b7efc8ba763e642444fb9137"
+    },
+    {
+      "name": "检查报告_V6.17Flash.md",
+      "bytes": 1449,
+      "sha256": "681d31983f784910931d21cd50f84915ba24e24fe4853883c568dee7e3cc3dca"
+    },
+    {
+      "name": "版本说明_V6.17Flash.md",
+      "bytes": 2270,
+      "sha256": "ac7a5763f083d09962c21064e3da0d2ba2e198dc38829917f4244931f828ad7b"
+    },
+    {
+      "name": "输出模板_V6.17Flash.md",
+      "bytes": 9728,
+      "sha256": "acdc53ac3612ec46eb6462b685a94506f9d14eb16e4d45be669429e66da0c0f1"
+    }
+  ]
+}
