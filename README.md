@@ -1,5 +1,7 @@
 # SD2.5 提示词助手 V6.17Flash
 
+> 🌐 [中文](#sd25-提示词助手-v617flash) ｜ [English](#english-version)
+
 **把剧本变成有镜头、有表演、有声音与连续性的 Seedance 视频提示词。**
 
 不只写“电影感、情绪强烈、镜头推进”，而是进一步说明：摄影机在哪里、人物怎样动、台词怎么说、动作与对白如何同步，以及这一镜结束后留下什么状态。
@@ -233,3 +235,260 @@ A 模式（正式成稿）与 C 模式（局部改镜）默认按以下目录结
 - **当前版本**：助手内核版本 **V6.17Flash** ｜ 插件分发包版本 **1.0.1**（核心规则、模板和知识库原文保持不变；分发层已适配便携路径，并取消了技能入口中强制调用外部计数命令的要求）。
 - **字符数上限**：单次交付的所有 PART 合计上限为 **6500 Unicode 字符**（含空格与换行）。当宿主环境没有无需额外授权的精确计数工具时，助手会自动预留明显余量，不会虚报精确字数。
 - **生成效果说明**：本助手的规则旨在让提示词逻辑严密、连续无歧义，但提示词本身无法保证视频生成端 100% 精确命中时码、复杂动作、口型同步或绝对无字幕/无 BGM，关键镜头仍需结合实际视频生成结果进行测试与微调。
+
+---
+
+# English Version
+
+## SD2.5 Prompt Assistant V6.17Flash
+
+**Turn a script into Seedance video prompts that carry shots, performance, sound, and continuity.**
+
+Instead of stopping at "cinematic, emotionally intense, slow push-in", it spells out where the camera stands, how the characters move, how a line is actually delivered, how action and dialogue sync up, and what state is left behind when a shot ends.
+
+This is an optional assistant preset plugin for **DeepSeek Harness (DSH)**, bundling the core rule set, the output template, 7 knowledge bases, and complete worked examples. Once installed, pick this preset in a new DSH session and handle script-to-prompt conversion, shot-design discussion, surgical shot revisions, and storyboard tables through plain conversation.
+
+> **Usage note**: this assistant writes prompts. It does not generate video, hand out generation credits, or call a video platform for you. Finished prompts are meant to be submitted by hand to a video generation platform that accepts these prompts and reference assets. Installing this plugin never switches your default assistant and never replaces another assistant.
+
+[Quick start](#quick-start) · [Core advantages](#core-advantages) · [Four working modes](#four-working-modes) · [Usage examples](#usage-examples) · [Workspace and saving rules](#workspace-and-saving-rules) · [Built-in knowledge bases](#built-in-knowledge-bases) · [Installation and update guide](#installation-and-update-guide) · [Release layout and version boundaries](#release-layout-and-version-boundaries)
+
+---
+
+## What is it?
+
+Think of it as an **AI storyboard consultant** that ships with a fixed working method and a reference library:
+
+- **Script to prompts**: feed in a script, scene notes, an outline, or an existing storyboard, and get back video prompts you can use directly.
+- **Pre-production shot discussion**: when you are unsure how a shot should be designed, it first lays out the options and their trade-offs instead of rushing into a finished draft.
+- **Table first, expand later**: if you want to approve the storyboard before generating prompts, it produces the standard nine-column storyboard table and waits for your approval before writing the full draft.
+- **Surgical shot revision**: when only one shot of an existing draft needs to change, it automatically re-checks the hand-off with the neighbouring shots instead of rewriting unrelated content.
+
+*(Note: this plugin is not a video generation model, an editing application, or a standalone chat client. It runs inside DSH alongside a chat model you have configured, and the model's comprehension, file handling, and instruction-following ability will affect real results.)*
+
+---
+
+## Core advantages
+
+Ordinary prompts tend to describe "mood" while leaving the concrete execution relationships unstated. This assistant's rules are designed around the pain points that most often send a shot back for another round:
+
+| Common pain point | How this assistant handles it | What you actually get |
+| :--- | :--- | :--- |
+| **Shot description is only "cinematic, close-up, slow push-in"** | Camera position, visible frame, focus point, light coverage, and primary camera move are described separately | You can check what a shot is meant to express instead of reading a pile of photography jargon |
+| **Action and dialogue behave like two separate pipelines** | Performance, action, dialogue, and reactions go into one "continuous performance" event, with sync, sequence, and interruption made explicit | Fewer puppet-like "move, then speak" / "speak, then move" arrangements |
+| **Lines get reworded, or repeated after a cut** | Your original lines are preserved verbatim with a single designated speaker, and cross-shot dialogue is marked as a continuation rather than restarted | A good fit for work that must reproduce scripted dialogue faithfully |
+| **Blocking, props, and action state reset after every cut** | Character identity, position, prop possession, and action phase are inherited automatically, and each shot must record the state that affects the next one | Easy visual checking of whether consecutive shots actually match |
+| **Only "says angrily", with no concrete performance** | Abstract emotion is converted into action quality and delivery that are visible and audible at that shot size | Performance directions become executable instead of empty emotional labels |
+| **The prompt keeps growing past the limit** | Organised and compressed against a 6500 Unicode character cap summed across all PARTs, protecting dialogue, story, and required fields first | A clear cutting order that never buys characters by deleting story |
+| **One small edit drags the whole passage along** | After a local change, timing, blocking, props, sound, and emotional hand-offs in the surrounding shots are re-verified | No more "fixed one shot, broke the next two" |
+
+### ⚡ Where does the "streamlined" part of V6.17Flash show up?
+
+When producing a finished prompt (Mode A), every shot keeps **7 core headings**:
+
+> **Shot size / camera position → layers and focus → light and coverage → camera move → continuous performance → sound → ending state**
+
+- **Merging like with like**: character emotion, action quality, delivery, the full line, and any necessary listener reaction are consolidated into the **"continuous performance"** field, so no separate "character emotional performance" column exists. One event is written in one place, which cuts a large amount of column-induced repetition.
+- **No loss of core quality**: Flash streamlines the field organisation only. **Dialogue, action causality, and shot continuity are never dropped.**
+
+---
+
+## Four working modes
+
+In daily use you **do not need to memorise mode letters** — just state your request in plain language:
+
+| Mode | When to use it, with everyday phrasing | What the assistant delivers |
+| :--- | :--- | :--- |
+| **A: Prompt mode** | "Turn this scene into prompts directly" | Full multi-shot PART prompts from the main template, saved to disk |
+| **B: Discuss / review mode** | "Why does this pacing feel off?", "Would a locked-off shot work better than handheld here?" | Cause analysis plus options and trade-offs, without forcing a finished draft |
+| **C: Shot revision mode** | "Change only shot 2, leave everything already approved alone" | Only the affected shot is rewritten, with cross-shot hand-offs re-checked and the file updated |
+| **D: Storyboard table mode** | "Give me the storyboard table first, expand into prompts after I approve" | The fixed nine-column storyboard table; it stops for your confirmation and converts to prompts afterwards |
+
+---
+
+## Quick start
+
+### 1. Install into DSH
+
+1. Download the repository ZIP or the Release archive and **fully extract it to a permanent local directory first**.
+2. In DSH, open that extracted directory and send the message below to an AI that has plugin-management permission, so it reads [给AI的安装指令](给AI的安装指令.md) and completes the installation automatically:
+
+```text
+请读取当前目录的《给AI的安装指令.md》，按说明安装 V6.17Flash。
+只新增可选助手，不修改我当前的默认助手。
+```
+
+*(Note: a full installation has two stages — "asset preparation" and "DSH plugin registration". Finishing the preparation program alone does not mean installation is complete; wait until the AI reports the plugin registration result.)*
+
+### 2. Start a new session and select the assistant
+
+After installation, follow DSH's prompt about restarting the client if needed. Then **start a new session** (an already-open session will not switch assistants) and pick this entry from the preset list:
+
+👉 **`SD2.5提示词助手_V6.17Flash`**
+
+### 3. Prepare files and send the task
+
+Put the script, notes, and any reference assets you need into your task workspace. When you send instructions, cover as many of these points as you can:
+
+- **Episode and scene**: e.g. "episode 3, scene 2", so the assistant knows where to archive files.
+- **Delivery style**: finish the draft directly, discuss options first, show the nine-column table first, or revise one shot.
+- **Duration and locked requirements**: e.g. "15 seconds total", plus any shot order or action outcome that must be preserved.
+- **Dialogue requirements**: state whether the original lines must be kept word for word.
+- **Asset purpose**: which file maps to which character, whether the face or the wardrobe is the reference, and which audio should contribute timbre only.
+
+*(You do not have to get every detail right in one message: the assistant will proactively ask about gaps that would affect story or asset mapping, and will make minimal, reasonable completions for ordinary execution details that do not change the story.)*
+
+---
+
+## Usage examples (copy and adapt)
+
+### Example 1: convert a script directly (no external assets)
+
+```text
+第3集第2场，总时长15秒，直接输出提示词。
+
+办公室里，林舟站在桌旁，把信封放到桌上，压低声音说：
+“合同我看过了。”
+许宁坐在桌后，没有接信封，只抬眼看他。
+
+台词逐字保留，不增加对白，不改变动作结果。
+工作区没有参考图片和音频，以文字设定为准。
+```
+
+> **What happens**: the assistant confirms the task workspace and episode folder, organises the shots against the seven-field template, checks dialogue, duration, and action relationships, and finally saves the draft by rule (with no external assets present, it never invents image or audio index numbers).
+
+### Example 2: storyboard table first, expansion after approval
+
+**Step one (ask for the table):**
+```text
+把这场戏先做成九列分镜表，等我确认后再写提示词。
+总时长20秒，保留全部台词，不新增人物。
+```
+
+**Step two (after approving the table):**
+```text
+按刚才确认的镜序、台词和时长展开成提示词，不改变剧情。
+```
+
+### Example 3: revise a single shot (local rework)
+
+```text
+只改第二镜：把慢推改为固定镜，人物动作和台词不变。
+检查与第一、第三镜的站位、道具持有和声音承接。
+其他已确认内容不要重写。
+```
+
+### Example 4: bind character images, a scene image, and a voice reference
+
+```text
+工作区的“林舟 西装.png”对应林舟，只参考面部与服装；
+“办公室.png”作为场景参考；
+“林舟 音色.wav”只参考林舟的声音音色。
+默认不打开图片和音频，不从文件名猜外貌。
+按本次实际上传顺序给素材编号，先汇报绑定关系再成稿。
+```
+
+> **What the resulting binding lines look like:**
+> ```text
+> 图1@办公室 绑定为办公室场景参考。
+> 图2@林舟 西装 绑定为林舟，面部与服装参考。
+> 将音频1@林舟 音色 绑定为林舟的声音音色，只取音色，不继承原台词、背景音乐与背景声。
+> ```
+> **⚠️ Important**: the assistant writing these binding lines does not upload anything to your video platform. When you actually generate video, upload the matching files manually and make sure **the upload order matches the numbering in the prompt (image 1, image 2, audio 1) exactly**.
+
+---
+
+## Workspace and saving rules
+
+### 1. Asset handling: file names only by default, no peeking at images or audio
+
+- **Scanning**: at the start of a task the assistant scans the workspace and identifies the script document plus any image, audio, and video files.
+- **Privacy and accuracy**: scripts and notes are read normally, but **images, audio, and video are never opened automatically** — only when you explicitly ask it to look at a specific media file. Character appearance is written strictly from the script, your instructions, or already-confirmed bindings, never guessed from a file name.
+
+### 2. Sound and text boundaries: keep real production sound, never add score or captions on a whim
+
+- **Kept by default**: character dialogue, natural ambient sound that fits the scene, real foley with an identifiable on-screen source (plus genuinely in-story prop text and off-screen character dialogue inside the scene).
+- **Excluded by default**: no BGM, no score, no transition stingers, no emotional emphasis sounds, no source-less decorative effects; no automatic narration, no dialogue subtitles, and no character name labels.
+- **Overridable**: if you explicitly ask for music, subtitles, narration, or full silence in a scene, the assistant adjusts both the allowed and the forbidden list accordingly.
+
+### 3. Automatic archiving: stored by episode / scene / PART
+
+Mode A (finished prompts) and Mode C (shot revision) save by the structure below, with each independent PART stored as its own `.txt` file (Mode D storyboard tables are not saved automatically):
+
+```text
+task workspace/
+└─ EP3/
+   ├─ EP3-2-Part1.txt
+   └─ EP3-2-Part2.txt
+```
+
+- If the episode or scene is unclear, the assistant asks first; if an episode folder such as `EP3` already exists, its existing naming style is reused and it will not silently rewrite it as `EP03`.
+- In Mode A a same-named file triggers a confirmation prompt; in Mode C the matching file is updated directly. Other project files in the workspace are never deleted.
+
+### 4. Personal preferences: your long-term habits are remembered
+
+Personal preferences live separately from the core knowledge bases, so you can record your own standing habits there:
+
+- Preferred target length per segment, visual style preferences, and reporting habits.
+- Whether to always produce the nine-column storyboard table first.
+- Whether automatic saving is on, plus fixed character/scene names and asset numbering habits for a project.
+
+> **Precedence**: `explicit instructions in the current conversation` > `personal preferences` > `system defaults`. A fresh installation starts from a clean template with no publisher habits baked in, and your existing personal preferences are preserved byte for byte across updates.
+
+---
+
+## Built-in knowledge bases
+
+The plugin ships with 7 core knowledge bases (used together with the core preset, the single output template, and the complete examples). At runtime the assistant retrieves from them on demand instead of loading everything each time:
+
+| No. | Knowledge base | Main purpose |
+| :---: | :--- | :--- |
+| **01** | **Rules and parameters** | Defines output format, parameter limits, internal rule items, and hard red lines |
+| **13** | **Shot card samples** | Standard structural skeletons for organising a single shot |
+| **14** | **Scene archetypes and shot-group patterns** | Matches a suitable shot-group pattern to a given space and dramatic event |
+| **15** | **Emotion and action vocabulary** | Converts abstract emotion, action, and delivery into visible and audible descriptions |
+| **16** | **Common failure cases** | Locates, diagnoses, and checks the high-frequency failure risks of video generation |
+| **17** | **Camera axis and dialogue mechanics** | Governs viewpoint choice, spatial relationships between characters, and multi-person dialogue staging to avoid crossing the line |
+| **18** | **Camera movement, lighting, and transitions** | Guides camera motion, light and coverage continuity, and choices of shot transition |
+
+---
+
+## Installation and update guide (for administrators and technical readers)
+
+Regular users can simply follow [Quick start](#quick-start) above and let the AI inside DSH read [给AI的安装指令](给AI的安装指令.md). The following describes the underlying installation mechanics and update boundaries for those maintaining their own environment:
+
+1. **Requirements**:
+   - The host must be a DSH build that provides `agent-preset`, `persona`, file, retrieval, skill, and related built-in tool plugins, with a working chat model configured by you.
+   - `Node.js 18+` is used only during the one-off asset preparation stage of an install or update; day-to-day drafting and character counting never invoke external scripts or processes.
+2. **Asset preparation command**:
+   - Run `node 安装准备.mjs --apply` in the extracted directory to perform the actual writes (without `--apply` it is a read-only preview).
+   - If this version is already installed in the target environment, add `--update` after obtaining update confirmation.
+3. **Target directory rules**:
+   - The `DSH_HOME` environment variable is read first; if unset, the `.dsh` folder under the current user directory is used.
+   - For multi-config or portable deployments, pass `--home` to specify the target data directory explicitly.
+4. **Plugin registration flow**:
+   - After asset preparation, have DSH's `plugin_manager` register the `bundle` directory returned by the preparation program, then check the `application` state, diagnostics, and restart requirements.
+   - **Never register the raw downloaded folder** whose path placeholders have not been substituted by the preparation program.
+5. **Version updates and migrating from an older release**:
+   - **Same-version update**: personal preferences and user-created files are preserved automatically, and the previous directory is fully backed up to `_backups/sd25-v617flash/<timestamp>` under the target data directory before being overwritten.
+   - **Migration from an older release**: when `--update` is passed explicitly, the program locates older Flash personal preferences by semantic version and migrates them (excluding the Pro edition, `.bak` backups, and future versions). A plain fresh install does not inherit older preferences automatically.
+6. **Safe rollback and uninstall**:
+   - During install, update, or rollback the plugin never writes to your `profile` configuration, never rewrites your default assistant selection, and never deletes other assistants or project files.
+   - To roll back, first disable or unregister this bundle in the DSH plugin manager, then restore the backup from `_backups` and re-register the original version. Uninstalling does not delete your personal preferences or historical backups.
+
+---
+
+## Release layout and version boundaries
+
+### 📁 Files in the release package
+- [给AI的安装指令](给AI的安装指令.md): the standard automated install, update, and rollback steps an AI reads and executes.
+- [安装准备](安装准备.mjs): integrity checks, portable path adaptation, backup, and preference inheritance during installation.
+- [文件校验](文件校验.json): byte sizes and SHA256 checksums for every file in the package.
+- [插件声明](payload/sd25-v617flash/bundle/cordis.patch.yml): the DSH plugin configuration file (declares this assistant only, never tampers with the default assistant).
+- [技能入口](payload/sd25-v617flash/skills/sd25-v617flash-prompt/SKILL.md): the core retrieval and production guide used at runtime.
+- [知识库索引](payload/sd25-v617flash/skills/sd25-v617flash-prompt/references/v6.17flash/INDEX.md): index of the bundled knowledge bases and item locations.
+- [个人偏好默认模板](templates/我的偏好.默认模板.md): the default personal preference template initialised on a fresh install.
+
+### 📌 Version and scope notes
+- **Current version**: assistant core **V6.17Flash** | plugin distribution **1.0.1** (core rules, templates, and knowledge base text are unchanged; the distribution layer now supports portable paths and no longer requires the skill entry to call an external counting command).
+- **Character cap**: all PARTs of a single delivery combined must stay within **6500 Unicode characters** (including spaces and line breaks). When the host offers no precise counting tool that needs no extra authorisation, the assistant leaves a clear margin instead of claiming an exact figure.
+- **On results**: these rules are meant to make prompts logically tight and unambiguous from shot to shot, but no prompt can guarantee that a video generator hits timing, complex action, lip sync, or a total absence of subtitles/BGM 100% of the time. Key shots still need testing and fine-tuning against real generation output.
