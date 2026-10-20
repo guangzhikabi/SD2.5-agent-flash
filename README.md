@@ -238,6 +238,19 @@ A 模式（正式成稿）与 C 模式（局部改镜）默认按以下目录结
 
 ---
 
+## 许可与使用边界
+
+本项目采用 **[使用许可 v2.3](LICENSE)**（中英对照，中文正文为准）。**它不是开源软件**：本许可是专有许可，仅授予许可文件明文规定的权利。
+
+- ✅ **自由创作**：下载安装后不限设备、份数、地域与用途地使用本助手；**生成产物可自由使用，含商业用途**——接单、付费交付、课程、作品集均**无需发布者同意、付费或分成**（第二条、第四条）。
+- ✅ **可改本地副本**：修改自己安装的副本供自己使用，包括用于自己的商业项目（第二条第 1 款第 3 项）。
+- ❌ **不得再分发**：不发布修改过的版本，也不转发 / 上传原版给任何人（同事、群聊、网盘、自有仓库、镜像站）；多人使用请各自自公开渠道下载（第三条）。
+- ❌ **商业嵌入须事先书面授权**：将助手本体打包进对外销售的产品 / 课程 / SaaS、做成在线服务或 API、对外收费提供提示词或分镜服务、以其为核心卖点宣传，均须事先书面许可（第三条、第八条）。
+- 📄 **分界线**：本许可限制**助手本体**的分发与商业嵌入，**不限制使用者创作之内容**（第三条判定口径、第四条）。
+- 🔐 安装准备程序对发布包执行 SHA256 校验，以确保安装到官方版本（LICENSE 属法律文本，不参与校验）。
+
+---
+
 # English Version
 
 ## SD2.5 Prompt Assistant V6.17Flash
@@ -492,3 +505,16 @@ Regular users can simply follow [Quick start](#quick-start) above and let the AI
 - **Current version**: assistant core **V6.17Flash** | plugin distribution **1.0.1** (core rules, templates, and knowledge base text are unchanged; the distribution layer now supports portable paths and no longer requires the skill entry to call an external counting command).
 - **Character cap**: all PARTs of a single delivery combined must stay within **6500 Unicode characters** (including spaces and line breaks). When the host offers no precise counting tool that needs no extra authorisation, the assistant leaves a clear margin instead of claiming an exact figure.
 - **On results**: these rules are meant to make prompts logically tight and unambiguous from shot to shot, but no prompt can guarantee that a video generator hits timing, complex action, lip sync, or a total absence of subtitles/BGM 100% of the time. Key shots still need testing and fine-tuning against real generation output.
+
+---
+
+## License and usage boundaries
+
+This project is released under the **[Use License v2.3](LICENSE)** (bilingual; the Chinese text controls). **It is not open-source software**: this is a proprietary licence granting only the rights expressly set out in the licence text.
+
+- ✅ **Create freely**: use the assistant without limits as to devices, copies, territory or purpose; **the Generated Outputs are freely usable, including commercially** — paid commissions, client delivery, courses and portfolios need **no consent, no fee, no revenue share** (Articles 2 and 4).
+- ✅ **Modify your local copy**: edit the copy you installed for your own use, including in your own commercial projects (Article 2.1(3)).
+- ❌ **No redistribution**: do not publish a modified version, and do not forward or upload the original to anyone (colleagues, chat groups, drives, your own repository, mirrors); everyone else should obtain it from a public channel themselves (Article 3).
+- ❌ **Commercial integration needs prior written consent**: bundling the assistant into a product, course or SaaS you sell; exposing it as an online service or API; charging for prompt or storyboard services built around it; making it a headline selling point (Articles 3 and 8).
+- 📄 **Where the line is**: the Licence restricts redistribution and commercial integration of **the assistant itself**; it does **not** restrict the content you create (Article 3.2, Article 4).
+- 🔐 The install-preparation program verifies SHA256 checksums of the release package so you install the official version (the LICENSE, being legal text, is not checksummed).

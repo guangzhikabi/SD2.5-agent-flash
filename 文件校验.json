@@ -23,11 +23,6 @@
       "sha256": "dd1f0e3eabf92a10559d98d9c3c8e8d1695adc9eb0110b22124f3dfbbb054b29"
     },
     {
-      "path": "LICENSE",
-      "bytes": 2770,
-      "sha256": "e40d1265865c949939930aa78733fdb518d5dd5a336cfb3c0659ad6b8e5b0431"
-    },
-    {
       "path": "payload/sd25-v617flash/bundle/cordis.patch.yml",
       "bytes": 45460,
       "sha256": "157eb2c38204eff665fb278aa849c2359cb871082d7597a4976a96b8d113f578"
@@ -119,8 +114,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 14950,
-      "sha256": "0e9dd8d74b723b6fac9c2135a5f7862c762b40ee1581beb6a3edcf7c5d719e86"
+      "bytes": 40785,
+      "sha256": "b3243dc4d841096353f1b9c95dc060305ba0162ac14f002b0f89a9a700b7db56"
     },
     {
       "path": "templates/我的偏好.默认模板.md",
